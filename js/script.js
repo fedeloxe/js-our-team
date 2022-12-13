@@ -55,7 +55,6 @@ for(let i = 0; i<team.length; i++){
 
 
 let container = document.getElementById('container')
-let member
 let div
 let teams
 
