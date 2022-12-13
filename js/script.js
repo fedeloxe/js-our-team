@@ -1,3 +1,4 @@
+//object
 let team = [
     {
         nome: "Wayne Barnett",
@@ -44,8 +45,30 @@ let team = [
     }
 ]
 
-
+// ---------- stampa in console---------------------
 for(let i = 0; i<team.length; i++){
     let teams = team[i];
     console.log(teams)
+}
+
+//-----------------stampa su dom--------------------
+
+
+let container = document.getElementById('container')
+let member
+let div
+let teams
+
+
+function newDiv(){
+    div = document.createElement('div');
+    div.classList.add('card');
+    div.innerHTML = `<p>${teams.nome} <br> ${teams.role}</p> <img src="./img/${teams.image}">` ;
+    return div;
+}
+
+for(let i = 0; i<team.length; i++){
+    teams = team[i];
+    newDiv(teams);
+    container.appendChild(div);
 }
